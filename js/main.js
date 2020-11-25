@@ -80,16 +80,44 @@ function imprimirCategoria(txt, clase, tipoEtiqueta) {
  * @param {string} clase - Clase para el agrupado OFICINA
  */
 function imprimir(objeto, clase) {
-    let nObjeto = [];
-    nObjeto.push(objeto.oficina, objeto.direccion, objeto.telefono);
+    // let nObjeto = [];
+    // nObjeto.push(objeto.oficina, objeto.direccion, objeto.telefono);
     let islaEtiqueta = document.createElement('div');
     islaEtiqueta.className = clase;
-    nObjeto.forEach(elemento => {
-        let linea = document.createElement('p');
-        let lineaCompleta = document.createTextNode(elemento.toString());
-        linea.appendChild(lineaCompleta);
-        islaEtiqueta.appendChild(linea);
-    });
+    // nObjeto.forEach(elemento => {
+    //     let linea = document.createElement('p');
+    //     let lineaCompleta = document.createTextNode(elemento.toString());
+    //     linea.appendChild(lineaCompleta);
+    //     islaEtiqueta.appendChild(linea);
+    // });
+    //Nombre
+    let lineaTipo = document.createElement('p');
+    let tipo = document.createTextNode('Nombre');
+    lineaTipo.appendChild(tipo);
+    lineaTipo.className = 'tipo';
+    islaEtiqueta.appendChild(lineaTipo);
+    let linea = document.createElement('p');
+    let lineaCompleta = document.createTextNode(objeto.oficina);
+    linea.appendChild(lineaCompleta);
+    islaEtiqueta.appendChild(linea);
+    lineaTipo = document.createElement('p');
+    tipo = document.createTextNode('Dirección');
+    lineaTipo.appendChild(tipo);
+    lineaTipo.className = 'tipo';
+    islaEtiqueta.appendChild(lineaTipo);
+    linea = document.createElement('p');
+    lineaCompleta = document.createTextNode(objeto.direccion);
+    linea.appendChild(lineaCompleta);
+    islaEtiqueta.appendChild(linea);
+    lineaTipo = document.createElement('p');
+    tipo = document.createTextNode('Teléfono');
+    lineaTipo.appendChild(tipo);
+    lineaTipo.className = 'tipo';
+    islaEtiqueta.appendChild(lineaTipo);
+    linea = document.createElement('p');
+    lineaCompleta = document.createTextNode(objeto.telefono);
+    linea.appendChild(lineaCompleta);
+    islaEtiqueta.appendChild(linea);
     return islaEtiqueta;
 }
 
