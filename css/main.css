@@ -7,106 +7,135 @@
     margin: 0;
     font-family: Quicksand;
 }
-main,nav{
-    margin-left: 10px;
+main{
+    margin-left: 15px;
     margin-right: 15px;
 }
+.busqueda,.botones{
+    display: flex;
+    flex-direction: column;
+}
+.botones>[type="button"]{
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.busqueda>[type="text"]{
+    border-radius: 5px;
+    border-color:  rgb(82, 82, 209);
+}
+.busqueda>[type="text"]:invalid{
+    border: 2px solid red;
+}
+.botonEspe{
+    background-color:  rgb(82, 82, 209);
+    color: white;
+    border: 2px solid rgb(46, 46, 119);
+}
+.botones{
+    margin-top: 10px;
+}
 header,footer{
-    /* display: flex;
-    align-items: center;
-    flex-direction: row; */
     background-color: rgb(82, 82, 209);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 10px;
+    color: white;
+}
+.oficina>.tipo{
+    border-bottom: 2px solid rgb(160, 160, 226)
+}
+.oficina{
+    padding: 20px;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.oficina>.tipo{
+    margin-top: 5px;
+}
+#contenido{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.municipio>h3{
+    margin-left: 2px;
+    margin-top: 10px;
+}
+label{
+    font-size: 15px;
+}
+nav{
+    background-color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 footer{
     margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 body{
     background-color: rgb(209, 230, 236);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
 }
 h2{
     border-bottom: 2px solid rgb(82, 82, 209);
 }
+img{
+    width: 30%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-@media (max-width: 600px){
-    h1{
-        font-size: 20px;
+@media (min-width: 600px){/**Tablet*/
+    .oficinas{
+        display: flex;
+        flex-wrap: wrap;
     }
-    input{
-        width: 278px;
+    .oficina{
+        margin: 10px;
+        flex: 1 1 40%;
     }
-    .busqueda,.botones{
+    .botones>[type="button"]{
+        flex-basis: 100%;
+    }
+    .botones{
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1000px){/**Escritorio (Grid)*/
+    body{
+        display: grid;
+        grid-template-areas: "head head head"
+                             "menu main main"
+                             "foot foot foot";
+    }
+    header{
+        grid-area: head;
+    }
+    nav{
+        grid-area: menu;
+    }
+    #contenido{
+        grid-area: main;
+    }
+    footer{
+        grid-area: foot;
+    }
+    header,footer{
+        height: 100px;
+    }
+    .botones{
         display: flex;
         flex-direction: column;
     }
-    .botones>*{
-        width: 80%;
-        margin-left: 10px;
-        margin-bottom: 5px;
+    .botones>[type="button"]{
+        
     }
-
 }
- */
-
-
-
-
-/* h1{
-    background-color: rgb(82, 82, 209);
-    color: white;
-    /*Buscar como darle tamañno
-}
-h2{
-    margin-bottom: 10px;
-    margin-left: 5px;
-    border-bottom: 2px solid rgb(82, 82, 209);
-}
-h3{
-    margin-bottom: 8px;
-    margin-left: 10px;
-}
-.oficinas{
-    margin: 20px;
-}
-body{
-    background-color: rgb(209, 230, 236);
-}
-.busqueda{
-    margin: 10px;
-}
-.tipo{
-    border-bottom: 2px solid rgb(160, 160, 226);
-    margin-bottom: 10px;
-    margin-top: 5px;
-} */

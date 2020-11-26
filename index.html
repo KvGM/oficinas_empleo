@@ -13,25 +13,23 @@
         <h1>Buscador de oficinas de empleo en Canarias</h1>
     </header>
     <nav>
-
         <div class="busqueda">
             <label>Isla</label>
-            <input type="text" id="isla" placeholder="Isla...">
-        </div>
-        <div class="busqueda">
+            <input type="text" minlength="5" id="isla">
             <label>Municipio</label>
-            <input type="text" id="municipio" placeholder="Municipio...">
+            <input type="text" minlength="5" id="municipio">
         </div>
         <div class="botones">
-            <button type="button" id="bBuscar">Buscar</button>
+            <button type="button" id="bBuscar" class="botonEspe">Buscar</button>
             <button type="button" id="bCancelar">Cancelar</button>
         </div>
     </nav>
-    <main>
+    <main id="contenido">
 
     </main>
     <footer>
-        <h1 class="title">Kevin García Marrero 2ºDAW A</h1>
+        <h2>2ºDAW A</h2><img src="./img/logo.png">
+        <h2>Kevin García</h2>
     </footer>
     <script src="./js/main.js" type="module"></script>
 </body>
