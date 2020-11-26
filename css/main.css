@@ -4,12 +4,12 @@
 }
 
 * {
-    margin: 0;
     font-family: Quicksand;
 }
 main{
-    margin-left: 15px;
     margin-right: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 .busqueda,.botones{
     display: flex;
@@ -18,10 +18,12 @@ main{
 .botones>[type="button"]{
     margin-bottom: 5px;
     border-radius: 5px;
+    padding: 1%;
 }
 .busqueda>[type="text"]{
     border-radius: 5px;
     border-color:  rgb(82, 82, 209);
+    padding: 1%;
 }
 .busqueda>[type="text"]:invalid{
     border: 2px solid red;
@@ -56,16 +58,13 @@ header,footer{
 .oficina>.tipo{
     margin-top: 5px;
 }
-#contenido{
-    margin-top: 10px;
-    margin-left: 20px;
-}
 .municipio>h3{
     margin-left: 2px;
     margin-top: 10px;
 }
 label{
     font-size: 15px;
+    margin-top: 7px;
 }
 nav{
     background-color: white;
@@ -82,7 +81,10 @@ body{
     background-color: rgb(209, 230, 236);
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+}
+html,body{
+    height: 100%;
+    margin: 0;
 }
 h2{
     border-bottom: 2px solid rgb(82, 82, 209);
@@ -98,7 +100,7 @@ img{
     }
     .oficina{
         margin: 10px;
-        flex: 1 1 40%;
+        flex: 1 1 300px;
     }
     .botones>[type="button"]{
         flex-basis: 100%;
@@ -121,8 +123,9 @@ img{
     }
     nav{
         grid-area: menu;
+        padding: 30px;
     }
-    #contenido{
+    main{
         grid-area: main;
     }
     footer{
@@ -131,11 +134,18 @@ img{
     header,footer{
         height: 100px;
     }
+    img{
+        width: 20%;
+    }
     .botones{
         display: flex;
         flex-direction: column;
+        gap: 0px;
     }
-    .botones>[type="button"]{
-        
+    .busqueda>[type="text"],.botones>[type="button"]{
+        padding: 4%;
+    }
+    .oficina{
+        max-width: 300px;
     }
 }
