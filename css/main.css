@@ -101,6 +101,7 @@ img{
     .oficina{
         margin: 10px;
         flex: 1 1 300px;
+        min-width: 300px; /*Pedido por los apuntes**/
     }
     .botones>[type="button"]{
         flex-basis: 100%;
@@ -146,6 +147,6 @@ img{
         padding: 4%;
     }
     .oficina{
-        max-width: 300px;
+        flex-basis: 400px;
     }
 }
